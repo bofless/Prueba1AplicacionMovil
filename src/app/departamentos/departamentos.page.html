@@ -1,0 +1,57 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Departamentos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Departamentos</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div id="content-container">
+    <h1>Gestión de Departamentos</h1>
+
+    <ion-searchbar placeholder="Buscar por nombre de departamento" (ionInput)="buscarDepartamento($event)">
+    </ion-searchbar>
+
+    <div id="add-button">
+      <ion-button color="medium" expand="block" (click)="agregarDepartamento()">+ Agregar Departamento</ion-button>
+    </div>
+
+    <div id="table-container">
+      <ion-card>
+        <ion-grid>
+          <ion-row>
+            <ion-col size="1"><strong></strong></ion-col>
+            <ion-col><strong>Departamento</strong></ion-col>
+            <ion-col><strong>Número de Empleados</strong></ion-col>
+            <ion-col><strong>Gerente</strong></ion-col>
+          </ion-row>
+
+          <ion-row *ngFor="let departamento of departamentosFiltrados">
+            <ion-col size="1">
+              <ion-checkbox (ionChange)="seleccionarDepartamento($event, departamento)"></ion-checkbox>
+            </ion-col>
+            <ion-col>{{ departamento.nombre }}</ion-col>
+            <ion-col>{{ departamento.empleados }}</ion-col>
+            <ion-col>{{ departamento.gerente }}</ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-card>
+    </div>
+
+    <div id="edit-button">
+      <ion-button color="medium" expand="block" (click)="editarSeleccionados()">Editar Seleccionados</ion-button>
+    </div>
+
+    <div id="delete-button">
+      <ion-button color="medium" expand="block" (click)="eliminarSeleccionados()">Eliminar Seleccionados</ion-button>
+    </div>
+  </div>
+</ion-content>

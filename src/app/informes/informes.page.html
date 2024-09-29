@@ -1,0 +1,65 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Informes</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Informes</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div id="content-container">
+ 
+    <h1>Generación de Informes</h1>
+    <ion-searchbar placeholder="Nombre del empleado" [debounce]="1000" (ionInput)="handleInput($event)"></ion-searchbar>
+
+    <div id="form-container">
+      <ion-item>
+        <ion-label>Selecciona el tipo de informe:</ion-label>
+        <ion-select placeholder="Informe de Desempeño">
+          <ion-select-option value="desempeno">Informe de Desempeño</ion-select-option>
+          <ion-select-option value="asistencia">Informe de Asistencia</ion-select-option>
+        </ion-select>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Desde (Fecha de inicio):</ion-label>
+        <ion-input placeholder="dd-mm-aaaa"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Hasta (Fecha de fin):</ion-label>
+        <ion-input placeholder="dd-mm-aaaa"></ion-input>
+      </ion-item>
+      <div id="generate-button">
+        <ion-button color="medium" expand="block">Generar Informe</ion-button>
+      </div>
+    </div>
+    <div id="report-container">
+      <h2>Informe de Desempeño</h2>
+      <p><strong>Período:</strong> Desde hasta XXXX</p>
+
+      <ion-card>
+        <ion-grid>
+          <ion-row>
+            <ion-col><strong>Empleado</strong></ion-col>
+            <ion-col><strong>Evaluación</strong></ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col>Juan Pérez</ion-col>
+            <ion-col>Sobresaliente (92%)</ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col>María García</ion-col>
+            <ion-col>Bueno (84%)</ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-card>
+    </div>
+  </div>
+</ion-content>

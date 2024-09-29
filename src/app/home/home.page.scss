@@ -1,0 +1,50 @@
+#login-container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+#avatar-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+#avatar-container img {
+  width: 150px;
+  height: 150px;
+}
+
+ion-item {
+  display: flex;
+  justify-content: center;  
+  width: 100%;              
+  max-width: 400px;         
+  margin: 10px auto;        
+  --inner-padding-start: 0; 
+}
+
+ion-input {
+  width: 100%;              
+}
+
+ion-icon {
+  margin-right: 10px;       
+}
+
+ion-text {
+  display: block;
+  text-align: right;
+  margin-top: 10px;
+}
+
+#login-button {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+ion-card {
+  margin-top: 20px;
+}

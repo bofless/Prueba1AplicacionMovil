@@ -1,0 +1,52 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Departamentos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Departamentos</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div id="content-container">
+
+    <h1>Gestión de departamentos</h1>
+
+    <ion-searchbar placeholder="Nombre del empleado" [debounce]="1000" (ionInput)="handleInput($event)"></ion-searchbar>
+
+    <div id="add-button">
+      <ion-button expand="block" color="medium">Agregar Empleado</ion-button>
+    </div>
+
+    <ion-card>
+      <h2>Empleados</h2>
+      <div id="employee-list">
+        <ul>
+          <li *ngFor="let empleado of filteredEmpleados">
+            {{ empleado.nombre }}
+            <div>
+              <ion-button size="small" color="medium" (click)="seleccionarEmpleado(empleado)">Seleccionar</ion-button>
+              <ion-button size="small" color="medium" (click)="eliminarEmpleado(empleado)">Eliminar</ion-button>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </ion-card>
+
+    <div *ngIf="empleadoSeleccionado" id="document-section">
+      <h3>EDITAR/OBTENER Documentos de {{ empleadoSeleccionado.nombre.toUpperCase() }}</h3>
+      
+      <ion-button color="medium">Contrato</ion-button>
+      <ion-button color="medium">Anexo</ion-button>
+      <ion-button color="medium">Hoja de Vida</ion-button>
+    </div>
+
+  </div>
+
+</ion-content>

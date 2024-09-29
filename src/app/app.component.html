@@ -1,0 +1,20 @@
+<ion-menu contentId="main-content">
+  <ion-header>
+    <ion-toolbar>
+
+      <img src="assets/icon/toffeeicon.png" alt="Toffee Logo" style="width: 100px; margin: 10px auto; display: block;">
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <ion-list>
+      <ion-item (click)="closeMenu()" [routerLink]="['/home']">Login</ion-item>
+      <ion-item (click)="closeMenu()" [routerLink]="['/empleados']">Empleados</ion-item>
+      <ion-item (click)="closeMenu()" [routerLink]="['/departamentos']">Departamentos</ion-item>
+      <ion-item (click)="closeMenu()" [routerLink]="['/informes']">Informes</ion-item>
+      <ion-item (click)="closeMenu()" [routerLink]="['/asistencia']">Asistencia</ion-item>
+      <ion-item (click)="closeMenu()" [routerLink]="['/tareas']">Tareas</ion-item>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+
+<ion-router-outlet id="main-content"></ion-router-outlet>

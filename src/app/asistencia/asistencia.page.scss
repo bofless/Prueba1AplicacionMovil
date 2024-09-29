@@ -1,0 +1,56 @@
+#content-container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  h1 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  ion-item {
+    margin-bottom: 15px;
+    --background: transparent;
+  }
+  
+  ion-item[datetime] {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;  
+    margin-bottom: 15px;
+  }
+  
+  ion-label {
+    font-size: 1rem;
+    margin-bottom: 5px;
+    text-align: left;
+    width: 100%;
+  }
+  
+  ion-input,
+  ion-select,
+  ion-datetime,
+  ion-textarea {
+    width: 100%;
+  }
+  
+  #calculate-button,
+  #justify-button {
+    margin-top: 20px;
+    width: 100%;
+  }
+  
+  ion-card {
+    padding: 10px;
+    margin-top: 20px;
+  }
+  
+  p {
+    font-size: 1rem;
+    color: #888;
+    text-align: center;
+    margin-top: 20px;
+  }
+  

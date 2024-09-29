@@ -1,0 +1,52 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Toffee</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content id="main-content" [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Inicio</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <div id="login-container">
+    
+    <div id="avatar-container">
+      <img src="assets/IniciarSesion.png" alt="Avatar Usuario">
+    </div>
+
+    <ion-item>
+      <ion-icon name="person-outline" slot="start"></ion-icon>
+      <ion-input placeholder="Usuario" type="text"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-icon name="lock-closed-outline" slot="start"></ion-icon>
+      <ion-input placeholder="Contraseña" type="password"></ion-input>
+    </ion-item>
+
+    <ion-text color="medium">
+      <a href="#">¿Olvidó su contraseña?</a>
+    </ion-text>
+
+    <div id="login-button">
+      <ion-button color="medium" expand="block">Iniciar sesión</ion-button>
+    </div>
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>¡Bienvenido!</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        ¡Bienvenido a Toffee! Somos una aplicación que ayuda con la administración de las empresas. 
+        Nuestro propósito es ayudar a que todos los empleados tengan una experiencia agradable. Si tienes
+        alguna duda con respecto al sistema, escríbenos a: Toffee&#64;gmail.com.
+      </ion-card-content>
+    </ion-card>
+
+  </div>
+
+</ion-content>

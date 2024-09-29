@@ -1,0 +1,58 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Tareas</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Tareas</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <!-- Bienvenida -->
+  <h2>Bienvenido/a, NombreEmpleado</h2>
+
+  <!-- Tabla de tareas -->
+  <div id="task-container">
+    <h3>Mis Tareas</h3>
+    <ion-grid>
+      <ion-row>
+        <ion-col><strong>Tarea</strong></ion-col>
+        <ion-col><strong>Fecha Límite</strong></ion-col>
+        <ion-col><strong>Completada (Check)</strong></ion-col>
+      </ion-row>
+
+      <ion-row *ngFor="let tarea of tareas">
+        <ion-col>
+          {{ tarea.nombre }}
+          <!-- Estado de la tarea usando chips -->
+          <ion-chip [color]="tarea.completada ? 'success' : 'warning'">
+            <ion-label>{{ tarea.completada ? 'Completada' : 'Pendiente' }}</ion-label>
+          </ion-chip>
+        </ion-col>
+        <ion-col>{{ tarea.fechaLimite }}</ion-col>
+        <ion-col>
+          <ion-checkbox [(ngModel)]="tarea.completada"></ion-checkbox>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+
+  <!-- Informes de la semana -->
+  <div id="report-container">
+    <h2>{{ numeroInformes }}</h2>
+    <p>Informes de esta semana</p>
+  </div>
+
+  <!-- Botones de eliminar y agregar tarea -->
+  <div id="button-container">
+    <ion-button (click)="eliminarTarea()">Eliminar</ion-button>
+    <ion-button (click)="agregarTarea()">Agregar</ion-button>
+  </div>
+
+</ion-content>

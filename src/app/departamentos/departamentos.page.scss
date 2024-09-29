@@ -1,0 +1,35 @@
+#content-container {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+h1 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+#add-button, #edit-button, #delete-button {
+  margin-bottom: 20px;
+}
+
+#table-container {
+  width: 100%;
+  overflow-x: auto;
+}
+
+ion-card {
+  padding: 15px;
+  background-color: #f9f9f9;
+}
+
+ion-row {
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+  padding: 10px 0;
+}
+
+ion-col {
+  text-align: center;
+}

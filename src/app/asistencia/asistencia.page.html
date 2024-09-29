@@ -1,0 +1,51 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Asistencia</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Asistencia</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div id="content-container">
+    <h1>Gestión de Asistencias</h1>
+
+    <ion-searchbar placeholder="Buscar empleado" [debounce]="1000" (ionInput)="handleInput($event)"></ion-searchbar>
+
+    <ion-item>
+      <ion-label>Selecciona el año:</ion-label>
+      <ion-select placeholder="Selecciona el año">
+        <ion-select-option *ngFor="let year of years" [value]="year">{{ year }}</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-button expand="block" id="calculate-button" color="medium">Calcular Asistencia</ion-button>
+
+    <ion-card>
+      <ion-card-content>
+        El porcentaje de asistencia del empleado en el año 2024 es: <strong>90%</strong>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-item datetime>
+      <ion-label>Fecha a justificar:</ion-label>
+      <ion-datetime placeholder="dd-mm-aaaa" display-format="DD-MM-YYYY"></ion-datetime>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Justificación (Vacaciones/Justificativo):</ion-label>
+      <ion-textarea placeholder="Ingrese su justificación aquí"></ion-textarea>
+    </ion-item>
+
+    <ion-button expand="block" id="justify-button" color="medium">Justificar</ion-button>
+
+    <p>Por favor, selecciona una fecha e ingresa una justificación.</p>
+  </div>
+</ion-content>

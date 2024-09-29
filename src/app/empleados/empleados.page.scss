@@ -1,0 +1,68 @@
+#content-container {
+    max-width: 400px;
+    margin: 0 auto;          
+    text-align: center;        
+  }
+  
+  #add-button {
+    margin: 20px 0;          
+  }
+  
+  ion-card {
+    padding: 15px;
+    margin-bottom: 20px;      
+  }
+  
+  #employee-list {
+    margin: 0 auto;
+  }
+  
+  #employee-list ul {
+    list-style-type: none;   
+    padding: 0;
+  }
+  
+  #employee-list ul li {
+    display: flex;
+    justify-content: space-between;  
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #ccc;   
+  }
+  
+  #employee-list ion-button {
+    margin-left: 10px;          
+  }
+  
+  #document-section {
+    margin-top: 20px;
+    text-align: center;         
+  }
+  
+  #document-section ul {
+    list-style-type: none;    
+    padding: 0;
+  }
+  
+  #document-section ul li {
+    margin-bottom: 10px;
+  }
+  
+  #document-section ul li a {
+    color: blue;                
+    text-decoration: underline;  
+    font-weight: bold;           
+  }
+  
+  #document-section h3 {
+    font-size: 1.5rem;           
+    font-weight: bold;
+    text-align: center;          
+  }
+  
+  #document-section ion-button {
+    display: block;
+    margin: 10px auto;         
+    color: #888;                
+  }
+  
