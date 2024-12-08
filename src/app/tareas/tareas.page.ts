@@ -21,26 +21,24 @@ export class TareasPage implements OnInit {
     { nombre: 'Tarea 2', fechaLimite: '2024-10-05', completada: true }
   ];
 
-  numeroInformes: number = 2;  // Inicializar la propiedad numeroInformes
-
+  numeroInformes: number = 2;
   constructor() {}
 
   ngOnInit() {}
 
-  // Método para eliminar una tarea
+ 
   eliminarTarea() {
-    // Implementa aquí la lógica de eliminación
-    this.tareas.pop();  // Como ejemplo, eliminamos la última tarea
+
+    this.tareas.pop();
   }
 
-  // Método para agregar una tarea
+  
   agregarTarea() {
-    // Implementa aquí la lógica de agregar una nueva tarea
+
     const nuevaTarea = { nombre: 'Nueva Tarea', fechaLimite: '2024-12-31', completada: false };
-    this.tareas.push(nuevaTarea);  // Como ejemplo, agregamos una nueva tarea
+    this.tareas.push(nuevaTarea);
   }
 
-  // Método para manejar la entrada de búsqueda (si fuera necesario)
   handleInput(event: any) {
     const query = event.target.value.toLowerCase();
     this.tareas = this.tareas.filter(tarea => tarea.nombre.toLowerCase().includes(query));
